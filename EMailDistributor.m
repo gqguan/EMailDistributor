@@ -29,5 +29,6 @@ for i = 1:length(Mails)
     Subject = Mails(i).Subject;
     Content = Mails(i).Content;
     Attachment = Mails(i).Attachment;
-    email(Recipient, Subject, Content, Attachment)
+%     email(Recipient, Subject, Content, Attachment)
+    sendolmail(Recipient, Subject, Content, Attachment)
 end
