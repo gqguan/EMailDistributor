@@ -17,7 +17,7 @@ for i = 1:length(Mails)
     text = sprintf('%s（%s）同学：\n\n你好！\n',Mails(i).Recipient.Name,Mails(i).Recipient.SN);
     if sum(idxFile) == 1
         Mails(i).Attachment = FullPaths(idxFile);
-        text = [text,sprintf('根据你的要求，现将批改后的课程报告（详见附件）返回给你，请查收！\n\n')];
+        text = [text,sprintf('根据你的要求，现将批改后的课程报告（详见附件pdf文件）返回给你，请查收！\n\n')];
         ok = true;
     else
         if sum(idxFile) == 0
