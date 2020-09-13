@@ -32,7 +32,7 @@ if nargin <= 2 || ~exist('range','var')
 end
 
 %% 导入数据
-[~, ~, data] = xlsread(workbookFile, sheetName, range);
+[~, ~, data] = xlsread([workbookPath,workbookFile], sheetName, range);
 data(cellfun(@(x) ~isempty(x) && isnumeric(x) && isnan(x),data)) = {''};
 
 idx = cellfun(@ischar, data);
